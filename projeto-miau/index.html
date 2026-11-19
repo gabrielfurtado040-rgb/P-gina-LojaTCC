@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Projeto Miau · Lojinha</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito:wght@400;600;700;800&family=Playfair+Display:ital,wght@1,900&display=swap">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header class="topo">
+    <a class="marca" href="#loja" aria-label="Projeto Miau, página inicial da loja"><img src="assets/logo.png"
+        alt="Projeto Miau"></a>
+    <nav class="menu" aria-label="Principal">
+      <a href="#loja">Início</a><a href="#loja">Adote</a><a href="#loja">Eventos</a><a href="#loja"
+        aria-current="page">Lojinha</a><a href="#loja">Contatos</a>
+    </nav>
+    <a class="carrinho-bt" href="#carrinho" aria-label="Abrir carrinho">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+        stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <circle cx="9" cy="20" r="1.5" />
+        <circle cx="18" cy="20" r="1.5" />
+        <path d="M2 3h3l2.6 12.4a1 1 0 0 0 1 .8h8.9a1 1 0 0 0 1-.8L20 7H6" />
+      </svg>
+      <span id="cont" aria-live="polite">0</span>
+    </a>
+  </header>
+
+  <main id="app" tabindex="-1"></main>
+
+  <footer class="rodape">Cavalhada, Porto Alegre. <a href="https://instagram.com/projetomiau_poa">@projetomiau_poa</a>.
+    De gateiro pra gateiro, lucro 100% revertido para o abrigo.</footer>
+
+  <!-- Painel lateral "Adicionado ao carrinho" -->
+  <div id="fundo" class="fundo"></div>
+  <aside id="gaveta" class="gaveta" role="dialog" aria-modal="true" aria-label="Adicionado ao carrinho"
+    aria-hidden="true">
+    <button class="fechar" data-fechar aria-label="Fechar">&times;</button>
+    <div id="gaveta-c"></div>
+  </aside>
+
+  <!-- Bibliotecas: Three.js (3D), carregador de .glb e gerador de QR Code -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/GLTFLoader.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>

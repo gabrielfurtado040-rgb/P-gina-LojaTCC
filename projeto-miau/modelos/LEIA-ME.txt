@@ -1,0 +1,26 @@
+PASTA DOS MODELOS 3D (.glb)
+===========================
+
+Coloque aqui os seus modelos exportados do Blender (File > Export > glTF 2.0, formato .glb).
+O site procura estes nomes de arquivo. Se o arquivo existir, ele usa o seu modelo.
+Se não existir, ele usa o modelo simples gerado por código (nada quebra).
+
+  caneca.glb     (serve para a caneca de 300ml e de 200ml)
+  xicara.glb
+  copo.glb       (copo térmico)
+  botton.glb
+  ecobag.glb
+  caneta.glb     chaveiro.glb     marcapaginas.glb
+
+Para o site trocar a COR e a ESTAMPA, nomeie os MATERIAIS no Blender assim:
+
+  corpo     material da peça principal (o site troca a cor dele)
+  estampa   material da peça da estampa (o site troca a imagem dele)
+
+A peça da estampa precisa ter UV unwrap (Tab, A, U, Unwrap), senão a imagem sai torta.
+Deixe o modelo leve (de preferência abaixo de 2 MB), com a base apoiada no chão.
+
+IMPORTANTE: o navegador não carrega .glb abrindo o index.html com duplo clique.
+No VS Code, instale a extensão "Live Server" e clique em "Go Live".
+
+Para ligar um modelo a um produto, procure por "modelo:" na lista PRODUTOS do script.js.
